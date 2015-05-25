@@ -12,6 +12,7 @@ gem 'jbuilder', '2.2.13'
 gem 'bcrypt', '3.1.10'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'geocoder'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]

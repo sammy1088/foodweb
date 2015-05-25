@@ -3,7 +3,7 @@ Foodweb::Application.routes.draw do
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
   
-  
+   resources :posts
   devise_for :users
 
   namespace :admin do
