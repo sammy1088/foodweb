@@ -46,7 +46,7 @@ end
 
 # SQLite 3
 
-  gem 'sqlite3', '1.3.10'
+
 
 
 # Devise: https://github.com/plataformatec/devise
