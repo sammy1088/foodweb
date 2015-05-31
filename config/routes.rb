@@ -1,5 +1,5 @@
 Foodweb::Application.routes.draw do
-  root "pages#home"
+  root "posts#index"
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
   

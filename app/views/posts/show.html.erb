@@ -3,3 +3,10 @@
       <td><%= @post.address %></td>
       <td><%= @post.latitude %></td>
       <td><%= @post.longitude %></td>
+
+<h3>Nearby Locations</h3>  
+<ul>  
+   <% @post.nearbys(10).each do |post| %>
+                        <li><%= nearby_classified.title %></li>
+                      <% end %>
+</ul> 

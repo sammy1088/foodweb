@@ -2,7 +2,28 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: foodweb-dev
   pool: 5
-  timeout: 5000
+  host: localhost
+  username: action
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: foodweb-test
+  pool: 5
+  host: localhost
+  username: action
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: foodweb-prod
+  pool: 5
+  host: localhost
+  username: action
+  password:

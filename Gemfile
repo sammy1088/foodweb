@@ -45,9 +45,9 @@ end
 
 
 # SQLite 3
-group :development, :test do
+
   gem 'sqlite3', '1.3.10'
-end
+
 
 # Devise: https://github.com/plataformatec/devise
 gem 'devise', '3.4.1'
@@ -58,9 +58,9 @@ group :production do
 end
 
 # PostgreSQL gem for Heroku
-group :production do
+
   gem 'pg'
-end
+
 
 # Unicorn: http://unicorn.bogomips.org
 group :production do
