@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+
+
 module Foodweb
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -29,6 +31,8 @@ module Foodweb
     # autoload lib path
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    
+ config.web_console.whiny_requests = false
 
   end
 end
