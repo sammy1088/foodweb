@@ -3,8 +3,12 @@ class PostsController < ApplicationController
     if params[:search].present?
       @posts = Post.near(params[:search], 500, order: 'distance')
   	else
-    @posts = Post.all
+         if params[:search].blank?
+           result = request.location
+           @posts = Post.near([result.latitude, result.longitude], 500, order: 'distance')
+  
   	end
+    end
   end
  
   def new

@@ -8,6 +8,7 @@
     <th>lat</th>
     <th>long</th>
     <th>dist</th>
+
   </tr>
  
   <% @posts.each do |post| %>
@@ -19,9 +20,8 @@
       <td><%= post.longitude %></td>
 
  
-      
-      <td><b> <%= post.distance_to(params[:search], :mi) %> miles</b></td>
-    
+
+      <td><b> <%= post.distance.round(1) %> miles</b></td>
     </tr>
  
 
@@ -29,9 +29,3 @@
   <% end %>
 </table>
 
-
-<%= form_tag posts_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search Near", :name => nil %>
-<% end %>
