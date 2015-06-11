@@ -13,6 +13,7 @@ gem 'bcrypt', '3.1.10'
 gem 'underscore-rails'
 gem 'geocoder'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'web-console', '2.1.2'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
@@ -31,7 +32,7 @@ gem 'bootstrap-sass', '3.3.4.1'
 
 group :development, :test do
   gem 'byebug', '4.0.5'
-  gem 'web-console', '2.1.2'
+  
 
   # Figaro: https://github.com/laserlemon/figaro
   gem 'figaro', '1.1.0'
