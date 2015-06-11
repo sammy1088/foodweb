@@ -1,25 +1,28 @@
-<h1>Listing articles</h1>
- 
+<h1>Nearest locally grown produce</h1>
+<h2>---filter veggies---</h2>
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th>address</th>
-    <th>lat</th>
-    <th>long</th>
+    <th>Pic....................</th>
+   
+    <th>Title....</th>
+
+    <th>Text....</th>
+    <th>address....</th>
+<th>seller</th>
     <th>dist</th>
 
   </tr>
  
   <% @posts.each do |post| %>
     <tr>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
+       <td><img src="http://america.aljazeera.com/content/dam/ajam/images/articles/okra_121813.jpg" width="64" height="64" alt="Icon" />...</td>
+      
+      <td>Okra</td>
+      <td>This harvest came out nicely..........</td>
       <td><%= post.address %></td>
-      <td><%= post.latitude %></td>
-      <td><%= post.longitude %></td>
 
- 
+
+       <td>Johnny Appleseed____</td>
 
       <td><b> <%= post.distance.round(1) %> miles</b></td>
     </tr>

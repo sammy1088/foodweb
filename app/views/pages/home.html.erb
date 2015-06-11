@@ -9,6 +9,13 @@
      <%= text_field_tag :search, params[:search] %>
 <%= submit_tag "Search" %>
   </p>
+  <br><br>
+<% end %>
+  
+  <%= form_tag(posts_path, :method => 'get') do %>
+
+  <%= submit_tag "USE MY LOCATION", :class => "btn btn-primary btn-large" %>
+  </p>
   
 <% end %>
 

@@ -2,7 +2,7 @@ Foodweb::Application.routes.draw do
   root "pages#home"
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
-  
+  resources :charges
    resources :posts
   devise_for :users
 
