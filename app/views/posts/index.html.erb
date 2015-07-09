@@ -1,5 +1,5 @@
-<h1>Nearest locally grown produce</h1>
-<h2>---filter veggies---</h2>
+<h1>Nearest locally grown produce available</h1>
+
 <table>
   <tr>
     <th>Pic....................</th>
@@ -10,6 +10,7 @@
     <th>address....</th>
 <th>seller........................</th>
     <th>dist</th>
+    <th>Purchase</th>
 
   </tr>
  
@@ -17,7 +18,7 @@
     <tr>
       <td><%= image_tag post.image.url(:large) %></td>
       
-      <td><%= post.title %></td>
+      <td><%= link_to post.title, post_path(post) %></td>
       <td><%= post.text %></td>
       <td><%= post.address %></td>
 
@@ -25,6 +26,8 @@
       <td><%= post.username %></td>
 
       <td><b> <%= post.distance.round(1) %> miles</b></td>
+      
+       <td><button type="button" class="btn btn-primary">Primary</button></td>
     </tr>
  
 

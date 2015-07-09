@@ -1,12 +1,36 @@
- <td><%= @post.title %></td>
+
+
+<table>
+  <tr>
+    <th>Pic....................</th>
+   
+    <th>Title....</th>
+
+    <th>Text....</th>
+    <th>address....</th>
+<th>seller........................</th>
+   
+    <th>Purchase</th>
+
+  </tr>
+ 
+
+    <tr>
+      <td><%= image_tag @post.image.url(:large) %></td>
+      
+      <td><%= @post.title %></td>
       <td><%= @post.text %></td>
       <td><%= @post.address %></td>
-      <td><%= @post.latitude %></td>
-      <td><%= @post.longitude %></td>
 
-<h3>Nearby Locations</h3>  
-<ul>  
-   <% @post.nearbys(10).each do |post| %>
-                        <li><%= nearby_classified.title %></li>
-                      <% end %>
-</ul> 
+
+      <td><%= @post.username %></td>
+
+
+      
+       <td><button type="button" class="btn btn-primary">Primary</button></td>
+    </tr>
+ 
+
+
+
+</table>
