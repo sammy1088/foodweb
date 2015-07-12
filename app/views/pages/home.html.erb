@@ -1,20 +1,23 @@
 
 
 <% @title %>
+<center>
 <h1><i class="glyphicon glyphicon-grain"></i> FoodWeb</h1>
 <br>
 <center>
 <%= form_tag(posts_path, :method => 'get') do %>
   <p>
-     <%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Enter address...", class: "form-control" %>
+    <br>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
   </p>
+
   <br><br>
 <% end %>
   
   <%= form_tag(posts_path, :method => 'get') do %>
 
-  <%= submit_tag "USE MY LOCATION", :class => "btn btn-primary btn-large" %>
+  <%= submit_tag "USE MY LOCATION via IP", :class => "btn btn-info btn-large" %>
   </p>
   
 <% end %>

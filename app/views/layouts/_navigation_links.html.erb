@@ -5,7 +5,7 @@
 <li><%= link_to "Sign up", new_user_registration_path %></li>
 <% else %>
 <li><%= link_to "My Bought/Sold", inside_path %></li>
-<li><%= link_to "Edit account", edit_user_registration_path %></li>
+
 <li><%= link_to "Sell Food!", new_post_path %></li>
 
 <% if current_user.admin? %>

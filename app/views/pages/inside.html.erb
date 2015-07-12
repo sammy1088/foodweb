@@ -1,5 +1,6 @@
 <% title("Protected page") %>
 <h1><%= current_user.username %></h1>
+<%= link_to "Edit account", edit_user_registration_path %>
 <h2>Veggies Selling</h2>
 
 <% current_user.posts.each do |post| %>

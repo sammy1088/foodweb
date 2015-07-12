@@ -6,11 +6,12 @@
    
     <th>Title....</th>
 
-    <th>Text....</th>
+   
     <th>address....</th>
 <th>seller........................</th>
     <th>dist</th>
-    <th>Purchase</th>
+  
+  
 
   </tr>
  
@@ -19,7 +20,7 @@
       <td><%= image_tag post.image.url(:large) %></td>
       
       <td><%= link_to post.title, post_path(post) %></td>
-      <td><%= post.text %></td>
+   
       <td><%= post.address %></td>
 
 
@@ -27,7 +28,8 @@
 
       <td><b> <%= post.distance.round(1) %> miles</b></td>
       
-       <td><button type="button" class="btn btn-primary">Primary</button></td>
+       <td><button type="button" class="btn btn-primary">Star</button></td>
+     
     </tr>
  
 
