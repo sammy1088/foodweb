@@ -1,5 +1,6 @@
 <% title("Protected page") %>
 <h1><%= current_user.username %></h1>
+<h2><%= current_user.phone %></h2>
 <%= link_to "Edit account", edit_user_registration_path %>
 <h2>Veggies Selling</h2>
 
@@ -19,7 +20,9 @@
 
 
   <% end %>
-<h2>Veggies Sold</h2>
-<p>item 1</p>
+<h2>my watching</h2>
+
+
 <h2>Veggies Bought</h2>
 <p>item 1</p>
+

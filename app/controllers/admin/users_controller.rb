@@ -27,9 +27,11 @@ class Admin::UsersController < Admin::BaseController
     new_params = user_params.dup
     new_params[:username] = new_params[:username].strip
     new_params[:email] = new_params[:email].strip
+    new_params[:phone] = new_params[:phone].strip
 
     @user.username = new_params[:username]
     @user.email = new_params[:email]
+    @user.phone = new_params[:phone]
     @user.password = new_params[:password] if new_params[:password].strip.length > 0
     @user.password_confirmation = new_params[:password_confirmation] if new_params[:password_confirmation].strip.length > 0
 
@@ -65,7 +67,8 @@ class Admin::UsersController < Admin::BaseController
     :password,
     :password_confirmation,
     :admin,
-    :locked
+    :locked,
+    :phone
     )
   end
 

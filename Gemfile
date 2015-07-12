@@ -15,6 +15,8 @@ gem 'geocoder'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'web-console', '2.1.2'
 gem "paperclip", "~> 4.3"
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]

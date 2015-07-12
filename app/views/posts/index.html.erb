@@ -1,4 +1,6 @@
-<h1>Nearest locally grown produce available</h1>
+<center>
+<h1><i class="glyphicon glyphicon-grain"></i>Nearest produce...</h1>
+  <br>
 
 <table>
   <tr>
@@ -8,7 +10,8 @@
 
    
     <th>address....</th>
-<th>seller........................</th>
+<th>seller</th>
+   
     <th>dist</th>
   
   
@@ -27,13 +30,15 @@
       <td><%= post.username %></td>
 
       <td><b> <%= post.distance.round(1) %> miles</b></td>
+   
       
-       <td><button type="button" class="btn btn-primary">Star</button></td>
-     
+
     </tr>
- 
 
 
-  <% end %>
-</table>
-
+  
+ <% end %>
+  
+  </table><br>
+    <%= will_paginate @posts %>
+</center>

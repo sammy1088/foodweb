@@ -16,6 +16,15 @@
         </div>
       </div>
     </div>
+    
+        <div class="form-group">
+          <%= f.label :phone %>
+      <div class="row">
+        <div class="col-sm-6">
+          <%= f.phone_field :phone, :autofocus => true, class: "form-control" %>
+        </div>
+      </div>
+    </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div class="row">
