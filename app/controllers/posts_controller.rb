@@ -3,12 +3,12 @@ class PostsController < ApplicationController
   def index
     
     if params[:search].present?
-      @posts = Post.near(params[:search], 500, order: 'distance').paginate(:page => params[:page], :per_page => 5)
+      @posts = Post.near(params[:search], 500, order: 'distance').paginate(:page => params[:page], :per_page => 9)
       
   	else
          if params[:search].blank?
            result = request.location
-           @posts = Post.near([result.latitude, result.longitude], 500, order: 'distance').paginate(:page => params[:page], :per_page => 4)
+           @posts = Post.near([result.latitude, result.longitude], 500, order: 'distance').paginate(:page => params[:page], :per_page => 9)
   
   	end
     end

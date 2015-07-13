@@ -1,44 +1,49 @@
-<center>
-<h1><i class="glyphicon glyphicon-grain"></i>Nearest produce...</h1>
-  <br>
 
-<table>
-  <tr>
-    <th>Pic....................</th>
-   
-    <th>Title....</th>
+<div class="container-fluid">
 
-   
-    <th>address....</th>
-<th>seller</th>
-   
-    <th>dist</th>
   
+ <center>
+<div class="row">
+ <h1><i class="glyphicon glyphicon-grain"></i>Nearest produce...</h1>
   
+</div>
 
-  </tr>
- 
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= image_tag post.image.url(:large) %></td>
-      
-      <td><%= link_to post.title, post_path(post) %></td>
+<br>
    
-      <td><%= post.address %></td>
-
-
-      <td><%= post.username %></td>
-
-      <td><b> <%= post.distance.round(1) %> miles</b></td>
+ <% @posts.each do |post| %>
    
       
+          <div class="col-md-4">
+            <div class="row">
+              <div class="over">
+            <%= image_tag post.image.url(:large) %>
+          <%= link_to post.title, post_path(post) %><br>
+         
+              <b>Seller:</b> <%= post.username %><br>
+           <b>Description:</b> <%= post.text %>
+<br>
+            <b>Address:</b> <%= post.address %><br>
 
-    </tr>
+
+              
+        
+            <b> <%= post.distance.round(1) %></b> miles away
+              <br><br>
+            </div>
+              </div>
+            </div>
+       <% end %>
+
+   
+
 
 
   
- <% end %>
-  
-  </table><br>
-    <%= will_paginate @posts %>
+
+
+   
 </center>
+   
+   </div>
+
+<%= will_paginate @posts %>
