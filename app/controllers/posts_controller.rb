@@ -26,12 +26,23 @@ class PostsController < ApplicationController
   @post.save
   redirect_to @post
 end
-  
+    def edit
 
+    @post = Post.find(params[:id])
+end
+def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    if @post.save 
+      redirect_to @post
+    else
+      render 'edit'
+    end
+end
 end
  
 private
   def post_params
-    params.require(:post).permit(:title, :username, :text, :address, :latitude, :longitude, :image)
+    params.require(:post).permit(:title, :username, :text, :address, :latitude, :longitude, :image, :price, :quantity)
   end
 

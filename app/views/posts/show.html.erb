@@ -1,36 +1,14 @@
-
-
-<table>
-  <tr>
-    <th>Pic....................</th>
-   
-    <th>Title....</th>
-
-    <th>Text....</th>
-    <th>address....</th>
-<th>seller........................</th>
-    <th>SellerPhone(if in cart)</th>
-    <th>email</th>
-
-  </tr>
- 
-
-    <tr>
-      <td><%= image_tag @post.image.url(:large) %></td>
+<center>
+<h1><%= @post.title %></h1>
+   <%= @post.username %><br><br>
+      <%= image_tag @post.image.url(:large) %>
       
-      <td><%= @post.title %></td>
-      <td><%= @post.text %></td>
-      <td><%= @post.address %></td>
+      <br>
+  <h2><%= @post.text %></h2><br>
+      <%= @post.address %><br>
+<%= @post.price %> per <%= @post.quantity %>
 
-
-      <td><%= @post.username %></td>
-
-<td>seller phone number</td>
       
-      <td>link to email</td>
-    </tr>
- 
 
 
-
-</table>
+</center>

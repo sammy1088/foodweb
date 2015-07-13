@@ -9,33 +9,37 @@
 </div>
 
 <br>
-   
+  <div class="row row-eq-height">
+     
  <% @posts.each do |post| %>
-   
+  
+    
+          <div class="col-md-6 panel">
+           
+            
+            <%= image_tag post.image.url(:large), :class => "img-rounded" %>
       
-          <div class="col-md-4">
-            <div class="row">
-              <div class="over">
-            <%= image_tag post.image.url(:large) %>
-          <%= link_to post.title, post_path(post) %><br>
+            <b><%= link_to post.title, post_path(post) %></b><br>
+           
+
+            Seller: <b><%= mail_to post.user.email, post.username %></b>, <%= post.user.phone %><br>
          
-              <b>Seller:</b> <%= post.username %><br>
-           <b>Description:</b> <%= post.text %>
-<br>
-            <b>Address:</b> <%= post.address %><br>
+            Address: <b><%= post.address %></b><br>
 
 
               
         
-            <b> <%= post.distance.round(1) %></b> miles away
-              <br><br>
-            </div>
+            <b> <%= post.distance.round(1) %></b> miles away  <br>
+            <%= post.price %> per <%= post.quantity %>
+           
+          
               </div>
-            </div>
+           
+         
        <% end %>
-
-   
-
+ 
+  
+ </div>
 
 
   
@@ -44,6 +48,8 @@
    
 </center>
    
-   </div>
+
 
 <%= will_paginate @posts %>
+  
+     </div>
