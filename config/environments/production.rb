@@ -22,6 +22,14 @@ Foodweb::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_files = false
 
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+  :s3_credentials => {
+    :bucket => 'S3_BUCKET_NAME'
+  }
+}
+  
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
