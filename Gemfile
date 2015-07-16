@@ -18,6 +18,7 @@ gem 'web-console', '2.1.2'
 gem "paperclip", "~> 4.3"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'gmaps4rails'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
