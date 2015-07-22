@@ -1,5 +1,10 @@
 
+
+  <body>
     <div id="wrap">
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
 
     <div class="container">
 
@@ -17,7 +22,7 @@
   
  <center>
 <div class="row">
- <h1><i class="glyphicon glyphicon-grain"style="color:black"></i>Nearest produce...</h1>
+ <h1><i class="glyphicon glyphicon-grain"></i>Nearest produce...</h1>
   
 </div>
 
@@ -89,4 +94,5 @@
     </div>
   </div>
 
+      </body>
 

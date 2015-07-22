@@ -1,0 +1,33 @@
+
+<% @title %>
+<center>
+<h1 class="logo"><i class="glyphicon glyphicon-grain"></i> FoodWeb</h1>
+<br>
+
+ <br><br>
+  <%= form_tag(posts_path, :method => 'get') do %>
+  <div class="input-group space">
+    <%= text_field_tag :search, params[:search], placeholder: "Enter address to find locally grown produce nearest to you...", class: "form-control" %>
+      <span class="input-group-btn">
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      </span>
+     <span class="input-group-btn">
+       <%= submit_tag "IP Capture", class: "btn btn-info" %>
+      </span>
+    </div><!-- /input-group -->
+ 
+  <% end %>
+
+  <h1>See What's Available and Where With FoodWeb!</h1>
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 600px;'></div>
+</div>
+
+  <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: { Zoom: 3 }, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      }); </script> 
+</center>
