@@ -5,7 +5,9 @@
         <center>
 				<div class="col-lg-12">
           
-					<h1><i class="glyphicon glyphicon-grain"style="color:white"></i><br/>A farmer's market for the weekday</h1><br>
+					<i style="font-size:8em;color:white" class="glyphicon glyphicon-grain"></i><br/>
+           <h1>A Farmer’s Market in every neighborhood</h1>
+          <h2>source locally with the FoodWeb</h2><br>
           
       
           <%= form_tag(posts_path, :method => 'get') do %>
@@ -31,7 +33,7 @@
 		<div class="row mt centered">
 			<div class="col-lg-12">
       
-				<h1>Which communities are using FoodWeb?</h1><hr>
+				<h1>Who's using FoodWeb?</h1><hr>
         <center>
         <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 600px;'></div>
@@ -52,21 +54,21 @@
 		<div class="row mt centered">
 			<div class="col-lg-4">
         <%= image_tag "backyard.jpg", :class => "img-rounded", size: "256" %>
-				<h4>Buy organic food grown next door</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<h4>Buy produce grown in your neighborhood</h4>
+				<p>Choose from a variety of local products, build connections with local growers, and customize your fresh food preferences</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
         <%= image_tag "farmers.jpg", :class => "img-rounded", size: "256" %>
-				<h4>Support local growers</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<h4>Sell your food</h4>
+				<p>Expand your market, connect with diverse audiences of consumers, and grow your business</p>
 
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 					<%= image_tag "comm.jpg", :class => "img-rounded", size: "256" %>
 				<h4>Strengthen your community's "FoodWeb"</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<p>Support local growers and strengthen networks of sustainable food exchange in your area</p>
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
 	</div><!-- /container -->
@@ -75,8 +77,8 @@
 	<div class="container">
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Our Awesome Team.<br/>Garden Lovers.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
+				<h1>Our Awesome Team</h1>
+				<h3>...because this garden won't dig itself</h3>
 			</div>
 		</div><!-- /row -->
 		
@@ -85,32 +87,39 @@
         <%= image_tag "sam.jpg", :class => "img-circle", size: "192" %>
 			
 				<h4>Sam Shreder</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+				<p>Sam Shreder is an Urban Planning graduate student and GA at OU’s <%= link_to "Institure for Quality Communities", "http://iqc.ou.edu/", target: "_blank" %>. Sam is passionate about utilizing modern web technologies to strengthen community health and self-determination.</p>
+        <p><%= mail_to "szshreder@gmail.com" do %>
+    <i class="glyphicon glyphicon-send"></i>
+<% end %>
+          <%= link_to "https://www.linkedin.com/in/samuelshreder", target: "_blank" do %>
+           <i class="glyphicon glyphicon-globe"></i>
+        <% end %>
+        </p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 			<%= image_tag "stan.jpg", :class => "img-circle", size: "192" %>
 				<h4>Stan Khrapak</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+				<p>Stan Khrapak has been a Senior Director at <%= link_to "Earth Rebirth", "http://earthrebirthnow.org/", target: "_blank" %> since May 2014. Prior to joining Earth Rebirth, Stan was Operations Associate at the Association for Continuing Higher Education from 2013 to 2015. Stan has been active in the environmental sustainability movement, focusing on the role of environmentalism in education, technology, and urban development.</p>
+				<p><%= mail_to "vkhrapak@gmail.com" do %>
+    <i class="glyphicon glyphicon-send"></i>
+<% end %> <%= link_to "https://www.linkedin.com/pub/stan-khrapak/79/8b8/529", target: "_blank" do %>
+           <i class="glyphicon glyphicon-globe"></i>
+        <% end %></p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 				<%= image_tag "ER.jpg", :class => "img-circle", size: "192" %>
 				<h4>Earth Rebirth</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+				<p>An organization working to bridge the gaps between our economic and environmental problems. The most long-term sustainable solutions apply to both realms of issues and we can rationally meet those needs without compromising the growth of society.</p>
+				<p><%= mail_to "info@earthrebirthnow.com" do %>
+    <i class="glyphicon glyphicon-send"></i>
+<% end %> <%= link_to "http://earthrebirthnow.org/", target: "_blank" do %>
+           <i class="glyphicon glyphicon-globe"></i>
+        <% end %></p>
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
 	</div><!-- /container -->
 	
-	
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
 
    

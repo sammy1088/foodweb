@@ -4,6 +4,21 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+#map img { 
+  max-width: none;
+}
+#map label { 
+  width: auto; display:inline; 
+} 
+
+
+#footer {
+  padding-bottom: 10px;
+  border-top-style: solid;
+  border-top-color: #3498db;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;

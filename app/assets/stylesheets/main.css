@@ -7,6 +7,7 @@
  * URL: http://blacktie.co
  */
 
+
 body {
   background-color: #f2f2f2;
     font-family: 'Lato', sans-serif;
@@ -151,10 +152,16 @@ i {
 }
 
 #headerwrap h1 {
-	margin-top: 60px;
-	margin-bottom: 15px;
+
 	color: white;
 	font-size: 45px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+#headerwrap h2 {
+  
+	color: white;
+	font-size: 30px;
 	font-weight: 300;
 	letter-spacing: 1px;
 }
