@@ -1,13 +1,13 @@
 <div id="wrap">
 <center>
 <h1><%= @post.title %></h1>
-   <%= @post.username %><br><br>
-      <%= image_tag @post.image.url(:large) %>
+  Seller: <b><%= mail_to @post.user.email, @post.username %></b><br><br>
+      <%= image_tag @post.image.url(:large), :class => "img-rounded" %>
       
       <br>
   <h2><%= @post.text %></h2><br>
       <%= @post.address %><br>
-<%= @post.price %> per <%= @post.quantity %>
+  Price: <b><%= @post.price %> per <%= @post.quantity %></b>
 
       
 

@@ -4,22 +4,23 @@ class PostsController < ApplicationController
  
     if params[:search].present?
     
-        @posts = Post.near(params[:search], 500, order: 'distance').paginate(:page => params[:page], :per_page => 9)
+        @posts = Post.near(params[:search], 50, order: 'distance').paginate(:page => params[:page], :per_page => 9)
 
   end
   	else
          if params[:search].blank?
            result = request.location
-           @posts = Post.near([result.latitude, result.longitude], 500, order: 'distance').paginate(:page => params[:page], :per_page => 9)
-  
-  
+           @posts = Post.near([result.latitude, result.longitude], 50, order: 'distance').paginate(:page => params[:page], :per_page => 9)
          end
    
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
   marker.lat post.latitude
   marker.lng post.longitude
-      marker.infowindow post.text
-      marker.infowindow post.image.url(:small)
+      marker.infowindow post.address
+      marker.picture({"url" => view_context.image_path(post.image.url(:large)), 
+    "width" => 64, 
+    "height" => 64 
+        })
     end
 
   end

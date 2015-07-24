@@ -24,25 +24,19 @@
   
     
           <div class="col-md-6">
-           
-         
+           <div id="indivs">
+         <b><%= post.distance.round(1) %></b> miles away
  <%= image_tag post.image.url(:large), :class => "img-rounded" %><br>
 
             
       
-            <%= link_to post.title, post_path(post) %><br>
+            <%= link_to post.title, post_path(post) %><br> 
            
 
             Seller: <b><%= mail_to post.user.email, post.username %></b>
          
            
-
-
-              
-        
-            <b> <%= post.distance.round(1) %></b> miles away  <br>
-          
-           
+            </div>
           
               </div>
            

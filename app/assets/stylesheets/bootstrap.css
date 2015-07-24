@@ -12,9 +12,13 @@
   width: auto; display:inline; 
 } 
 
+#indivs {
+  margin-top: 20px;
+}
 
 #footer {
   padding-bottom: 10px;
+  margin-top: 20px;
   border-top-style: solid;
   border-top-color: #3498db;
 }
