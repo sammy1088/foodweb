@@ -1,5 +1,10 @@
+<div id="wrap">
+ 
+ <div class="container">
+  <center>
+
 <div class="row">
-  <div class="col-sm-6 ">
+  <div class="col-sm-12">
     <h1>Forgot your password?</h1>
 
     <%= form_for(resource, :as => resource_name,
@@ -12,20 +17,24 @@
     <div class="form-group">
       <%= f.label :email %>
       <div class="row">
-        <div class="col-sm-6">
+      
           <%= f.email_field :email, :autofocus => true, class: "form-control" %>
-        </div>
+    
       </div>
     </div>
 
 
     <div class="row">
-      <div class="col-sm-6">
+    
         <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
-      </div>
+  
     </div>
     <% end %>
 
     <%= render "devise/shared/links" %>
   </div>
+</div>
+    
+     </center>
+</div>
 </div>

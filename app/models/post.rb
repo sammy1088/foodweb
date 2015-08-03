@@ -7,7 +7,8 @@ class Post < ActiveRecord::Base
   styles: { small: "64x64", med: "100x100", large: "200x200#" },
 
     :storage => :s3,
-    :bucket => 'foodweb'
+  :bucket => 'foodweb',
+ :s3_credentials => S3_CREDENTIALS
 
 
               
