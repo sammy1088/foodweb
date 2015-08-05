@@ -5,7 +5,8 @@ Foodweb::Application.routes.draw do
   resources :charges
   
   resources :posts 
-  
+
+  get "disclaimer", to: "pages#disclaimer", as: "disclaimer"
 
   devise_for :users 
 

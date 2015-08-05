@@ -8,14 +8,21 @@ class PagesController < ApplicationController
   end
   def home
     @posts = Post.all
-@hash = Gmaps4rails.build_markers(@posts) do |post, marker|
+ @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
   marker.lat post.latitude
   marker.lng post.longitude
-end
+      marker.infowindow post.address
+      marker.picture({"url" => view_context.image_path(post.image.url(:small)), 
+    "width" => 64, 
+    "height" => 64,
+        })
+    end
   end
 
   def inside
  
+  end
+  def disclaimer
   end
   
   

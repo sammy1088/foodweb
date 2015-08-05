@@ -17,9 +17,9 @@ class PostsController < ApplicationController
   marker.lat post.latitude
   marker.lng post.longitude
       marker.infowindow post.address
-      marker.picture({"url" => view_context.image_path(post.image.url(:large)), 
+      marker.picture({"url" => view_context.image_path(post.image.url(:small)), 
     "width" => 64, 
-    "height" => 64 
+    "height" => 64,
         })
     end
 
