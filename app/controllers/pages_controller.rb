@@ -11,11 +11,8 @@ class PagesController < ApplicationController
  @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
   marker.lat post.latitude
   marker.lng post.longitude
-      marker.infowindow post.address
-      marker.picture({"url" => view_context.image_path(post.image.url(:small)), 
-    "width" => 64, 
-    "height" => 64,
-        })
+    marker.infowindow render_to_string(:partial => "mapbox", locals: { post: post })
+     
     end
   end
 

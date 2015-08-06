@@ -1,22 +1,25 @@
+<div id="wrap">
+  <div class="container">
+  <center>
 <%= form_for @post, :method => :patch do |f| %>
-  <p>
+ <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </p>
  
   <p>
     <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area :text, class: "form-control" %>
   </p>
 
   <p>
     <%= f.label :price %><br>
-    <%= f.text_area :price %>
+    <%= f.text_area :price, class: "form-control" %>
   </p>
 
   <p>
     <%= f.label :quantity %><br>
-    <%= f.text_area :quantity %>
+    <%= f.text_area :quantity, class: "form-control" %>
   </p>
  
  
@@ -27,18 +30,13 @@
 
   <p>
     <%= f.label :address %><br>
-    <%= f.text_area :address %>
+    <%= f.text_area :address, class: "form-control" %>
   </p>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
+<div class="btn-group">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
-  </div>
-
-  <p>
-    <%= f.submit %>
-  </p>
 <% end %>
+    
+      </center>
+</div>
+  </div>

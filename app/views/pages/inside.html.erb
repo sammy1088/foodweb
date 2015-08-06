@@ -1,15 +1,15 @@
 <div id="wrap"><center>
 <% title("Protected page") %>
 <h1><%= current_user.username %></h1>
-<h2><%= current_user.phone %></h2>
+  phone: <b><%= current_user.phone %></b><br>
 <%= link_to "Edit account", edit_user_registration_path %>
-<h2>Produce Selling</h2>
+<h2>Produce Selling</h2> click link to edit post
 
   <div class="row">
      <div class="col-md-12">
 
   <% current_user.posts.each do |post| %>
-    
+   
        <div class="col-md-6">
            <div id="indivs">
         
@@ -17,12 +17,13 @@
 
             
       
-            <%= link_to post.title, post_path(post) %><br> 
+             <%= link_to post.title, edit_post_path(post) %><br> 
            
 
          </div>
            
             </div>
+    
            <% end %>
               </div>
            
