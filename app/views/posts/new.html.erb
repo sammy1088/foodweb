@@ -1,6 +1,8 @@
 <div id="wrap">
   <div class="container">
   <center>
+    <h1>List your produce</h1>
+    <br>
 <%= form_for :post, url: posts_path do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -8,35 +10,30 @@
   </p>
  
   <p>
-    <%= f.label :text %><br>
+    <%= f.label "Description" %> <i>please include decscription of freshness, quantity available, and cost per unit.</i>
+    
+    <br>
     <%= f.text_area :text, class: "form-control" %>
   </p>
 
-  <p>
-    <%= f.label :price %><br>
-    <%= f.text_area :price, class: "form-control" %>
-  </p>
-
-  <p>
-    <%= f.label :quantity %><br>
-    <%= f.text_area :quantity, class: "form-control" %>
-  </p>
- 
- 
-<p>
-  <%= f.label :image %><br>
-  <%= f.file_field :image %>
-</p>
 
   <p>
     <%= f.label :address %><br>
     <%= f.text_area :address, class: "form-control" %>
   </p>
+    
+    <p>
+  <%= f.label :image %><br>
+  <%= f.file_field :image %>
+</p>
+    <br>
+    
 <div class="btn-group">
     <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>
   
 <% end %>
+    <br>
     </center>
 </div>
   </div>

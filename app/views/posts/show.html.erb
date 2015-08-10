@@ -2,13 +2,19 @@
 <center>
   <div id="indivs">
 <h1><%= @post.title %></h1>
-  Seller: <b><%= mail_to @post.user.email, @post.username %></b><br><br>
+ 
+    <%= mail_to @post.user.email, "email seller", class: "btn btn-info btn-xs" %>
+    <br><br>
       <%= image_tag @post.image.url(:large), :class => "img-rounded" %>
       
-      <br>
-  <h2><%= @post.text %></h2><br>
-      <%= @post.address %><br>
-  Price: <b><%= @post.price %> per <%= @post.quantity %></b>
+      <br><br>
+     <b>description: </b>
+    <div id="postdesc">
+      
+     <%= @post.text %>
+       </div>
+    <b>address:</b> <%= @post.address %><br>
+
     </div>
 </center>
 </div>

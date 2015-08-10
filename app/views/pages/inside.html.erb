@@ -1,9 +1,12 @@
 <div id="wrap"><center>
-<% title("Protected page") %>
+  <% title("User Home") %>
 <h1><%= current_user.username %></h1>
+  <% if current_user.phone.present? %>
   phone: <b><%= current_user.phone %></b><br>
+  <% end %>
+  
 <%= link_to "Edit account", edit_user_registration_path %>
-<h2>Produce Selling</h2> click link to edit post
+  <h2>Produce Selling</h2> <i>click link to edit post</i>
 
   <div class="row">
      <div class="col-md-12">

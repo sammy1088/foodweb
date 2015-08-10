@@ -1,9 +1,195 @@
+/*
+ * Overwritten by RailsBricks
+ *
+
+
+ */
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: FLATTY - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+/* line 11, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+body {
+  background-color: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+/* line 23, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+/* line 29, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+h1 {
+  font-size: 40px;
+}
+
+/* line 33, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+h3 {
+  color: #95a5a6;
+  font-weight: 400;
+}
+
+/* line 38, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+h4 {
+  color: #95a5a6;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* Paragraph & Typographic */
+/* line 45, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+p {
+  line-height: 28px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+/* line 51, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+.centered {
+  text-align: center;
+}
+
+/* Links */
+/* line 56, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+a {
+  color: #3498db;
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+/* line 67, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+a:hover,
+a:focus {
+  color: #7b7b7b;
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 74, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+a:before,
+a:after {
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+/* line 83, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 92, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+.navbar-default {
+  background-color: #3498db;
+  border-color: transparent;
+}
+
+/* line 97, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+/* line 101, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+/* Helpers */
+/* line 107, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+.mt {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 112, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+.form-control {
+  height: 42px;
+  font-size: 18px;
+  width: 280px;
+}
+
+/* line 118, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+i {
+  margin: 8px;
+  color: #3498db;
+}
+
+/* line 122, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+#wrap {
+  margin-top: -20px;
+  padding-top: 75px;
+  background-attachment: relative;
+  background-position: center center;
+  width: 100%;
+}
+
+/* HeaderWrap */
+/* line 133, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+#headerwrap {
+  /* background: url(../img/bg01.jpg) no-repeat center top; */
+  background-color: #3498db;
+  margin-top: -20px;
+  padding-top: 200px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 154, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+#headerwrap h1 {
+  color: white;
+  font-size: 45px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* line 161, /home/nitrous/foodweb/app/assets/stylesheets/main.css */
+#headerwrap h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 
 #posttitle {
   font-weight: bold;
