@@ -14,7 +14,9 @@
      <%= @post.text %>
        </div>
     <b>address:</b> <%= @post.address %><br>
-
+    <div id="posttime">
+    posted <b><%= time_ago_in_words(@post.created_at)  %></b> ago
+      </div>
     </div>
 </center>
 </div>
