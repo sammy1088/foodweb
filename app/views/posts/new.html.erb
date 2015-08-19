@@ -10,7 +10,7 @@
   </p>
  
   <p>
-    <%= f.label "Description" %> <i>please include decscription of freshness, quantity available, and cost per unit.</i>
+    <%= f.label "Description" %> <i>please include description of freshness, quantity available, and cost per unit.</i>
     
     <br>
     <%= f.text_area :text, class: "form-control" %>
@@ -31,7 +31,7 @@
 <div class="btn-group">
     <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>
-  
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 <% end %>
     <br>
     </center>

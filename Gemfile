@@ -19,6 +19,7 @@ gem "paperclip", "~> 4.3"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'gmaps4rails'
+gem 'omniauth-facebook'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
