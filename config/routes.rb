@@ -15,5 +15,3 @@ resources :users, only: [:index]
     resources :users
     
   end
-
-end
