@@ -1,21 +1,23 @@
 class User < ActiveRecord::Base
   has_many :posts
- def self.new_with_session(params, session)
-    super.tap do |user|
-      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-        user.email = data["email"] if user.email.blank?
-      end
+ def self.find_or_create_from_auth_hash(auth_hash)
+    user = where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create
+    user.update(
+      name: auth_hash.info.nickname,
+      token: auth_hash.credentials.token,
+      secret: auth_hash.credentials.secret
+    )
+    user
+  end
+
+  def twitter
+    @client ||= Twitter::REST::Client.new do |config|
+      config.consumer_key        = Rails.application.secrets.twitter_api_key
+      config.consumer_secret     = Rails.application.secrets.twitter_api_secret
+      config.access_token        = token
+      config.access_token_secret = secret
     end
   end
-  def self.from_omniauth(auth)
-  where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-    user.email = auth.info.email
-    user.password = Devise.friendly_token[0,20]
-    user.username = auth.info.name 
-    user.provider = auth.provider
-    user.uid = auth.uid
-  end
-end
   # Use friendly_id on Users
   extend FriendlyId
   friendly_id :friendify, use: :slugged
@@ -38,7 +40,7 @@ end
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-devise :omniauthable, :omniauth_providers => [:facebook]
+devise :omniauthable, :omniauth_providers => [:twitter]
 
   # Pagination
   paginates_per 100

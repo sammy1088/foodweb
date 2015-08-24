@@ -194,6 +194,9 @@ Devise.setup do |config|
   #
   # Defines which key will be used when recovering the password for an account
   config.reset_password_keys = [ :email ]
+  
+  
+  config.omniauth :twitter, "OxrSRlVr0swecQElN66kMQEgY", "VhpxHPv6IPrbqxonjM5kN8FcZUEdYcakNN98hrstqVEpm4xuRa"
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
