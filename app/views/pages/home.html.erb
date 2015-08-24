@@ -4,7 +4,7 @@
 			<div class="row">
         <center>
 				<div class="col-lg-12">
-          
+       <div id="buy">
 					<i style="font-size:8em;color:white" class="glyphicon glyphicon-grain"></i><br/>
            <h1>A Farmer’s Market in every neighborhood</h1>
           <h2>source your food locally with FoodWeb</h2><br>
@@ -19,7 +19,7 @@
            </div>
             <% end %>	
 
- 
+ </div>
  
 				</div><!-- /col-lg-6 -->
 	
@@ -53,21 +53,21 @@
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
-        <%= image_tag "bb.jpg", :class => "img-rounded", size: "256" %>
-				<h4>Buy produce grown in your neighborhood</h4>
+        <%= link_to (image_tag "bb.jpg", :class => "img-rounded", size: "256"), "#buy" %>
+				<h4><div id="under"><%= link_to "Buy produce grown in your neighborhood", "#buy" %></div></h4>
 				<p>Choose from a variety of local products, build connections with local growers, and customize your fresh food preferences</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-        <%= image_tag "sell.jpg", :class => "img-rounded", size: "256" %>
-				<h4>Sell your food</h4>
+        <%= link_to (image_tag "strength.jpg", :class => "img-rounded", size: "256"), new_user_registration_path %>
+				<h4><div id="under"><%= link_to "Sell your food", new_user_registration_path %></div></h4>
 				<p>Expand your market, connect with diverse audiences of consumers, and grow your business</p>
 
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-        <%= image_tag "aa.jpg", :class => "img-rounded", size: "256" %>
-				<h4>Strengthen your community's "FoodWeb"</h4>
+        <%= link_to (image_tag "garden.jpg", :class => "img-rounded", size: "256"), new_user_registration_path %>
+				<h4><div id="under"><%= link_to "Strengthen your community's 'FoodWeb'", new_user_registration_path %></div></h4>
 				<p>Support local growers and strengthen networks of sustainable food exchange in your area</p>
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
