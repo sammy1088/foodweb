@@ -20,6 +20,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'gmaps4rails'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 # Necessary for Windows OS (won't install on *nix systems)
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
