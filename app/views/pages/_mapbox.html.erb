@@ -3,5 +3,5 @@
 <p><%= post.address %></p>
   <p><%= image_tag post.image.url(:large), :class => "img-rounded" %></p>
   <%= mail_to post.user.email, "email seller", class: "btn btn-info" %><br>
-  <b><%= post.user.phone %></b>
+
 </div>
