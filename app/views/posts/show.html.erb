@@ -6,9 +6,10 @@
  
     <%= mail_to @post.user.email, "email seller", class: "btn btn-info btn-xs" %>
     <br><br>
+    <% if @post.image? %>
       <%= image_tag @post.image.url(:large), :class => "img-rounded" %>
       
-      <br><br>
+      <br><br><% end %>
      <b>description: </b>
     <div id="postdesc">
       

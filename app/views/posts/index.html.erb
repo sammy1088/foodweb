@@ -26,8 +26,13 @@
           <div class="col-md-6">
            <div id="indivs">
          <b><%= post.distance.round(1) %></b> miles away
- <%= image_tag post.image.url(:large), :class => "img-rounded" %><br>
-
+             <% if post.image? %>
+ <%= image_tag post.image.url(:large), :class => "img-rounded" %>
+             <% else %>
+             <%= image_tag "noimage.png", :class => "img-rounded", size: "200" %>
+             
+             <br>
+<% end %>
             
       <div id="posttitle">
              <%= link_to post.title, post_path(post) %>

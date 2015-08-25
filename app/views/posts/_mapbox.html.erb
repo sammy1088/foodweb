@@ -1,7 +1,9 @@
 <div class="map_box">
 <h3><%= link_to post.title, post_path(post) %></h3>
 <p><%= post.address %></p>
+  <% if post.image? %>
   <p><%= image_tag post.image.url(:large), :class => "img-rounded" %></p>
+  <% end %>
   <%= mail_to post.user.email, "email seller", class: "btn btn-info" %>
 <br>
 </div>
