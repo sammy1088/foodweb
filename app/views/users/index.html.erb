@@ -3,13 +3,15 @@
 
     <div class="container">
 
-
+      
+      
 <% @users.each do |user| %>
 
-
-<%= user.email %>
+<div class="row">
+<%= user.email %> |
       <%= user.username %>
+  </div>
    <% end %>
-      
+      <h1>User Count:  <%= User.count %></h1>
           </div>
   </div>
