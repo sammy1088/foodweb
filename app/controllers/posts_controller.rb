@@ -18,7 +18,12 @@ class PostsController < ApplicationController
   marker.lng post.longitude
       marker.infowindow render_to_string(:partial => "mapbox", locals: { post: post })
     end
-
+    
+respond_to do |format|
+  format.html do |html|
+    html.phone 
+  end
+end
   end
  
   def new

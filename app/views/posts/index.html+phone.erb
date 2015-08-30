@@ -1,0 +1,89 @@
+
+    <div id="wrap">
+
+    <div class="container">
+
+  
+
+      <div class="row">
+        <div class="col-sm-12">
+
+<div class="container-fluid">
+
+  
+ <center>
+<div class="row">
+ <h1><i class="glyphicon glyphicon-grain"style="color:black"></i>Nearest produce...</h1>
+  
+</div>
+
+<br>
+  <div class="row">
+     <div class="col-md-6">
+ <% @posts.each do |post| %>
+  
+    
+          <div class="col-md-6">
+           <div id="indivs">
+         
+             <% if post.image? %>
+ <%= image_tag post.image.url(:large), :class => "img-rounded" %>
+             <% else %>
+             <%= image_tag "noimage.png", :class => "img-rounded", size: "200" %>
+             
+             <br>
+<% end %>
+            
+      <div id="posttitle">
+             <%= link_to post.title, post_path(post) %>
+           </div>
+
+            <%= mail_to post.user.email, "email seller", class: "btn btn-info btn-xs" %>
+       <b><%= post.distance.round(1) %></b> miles away
+           
+            </div>
+          
+              </div>
+           
+         
+       <% end %>
+
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  
+ </div>
+
+
+  
+
+
+
+   
+
+
+
+  
+   <div class="col-md-6">
+     <div style='width: auto;'>
+  <div id="map" style='width: auto; height: 900px;'></div>
+</div>
+
+  <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: { Zoom: 3 }, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>); 
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      }); 
+     </script> 
+   </div>
+   </div>
+
+</center> 
+     </div>
+            </div>
+      </div>
+
+    </div>
+  </div>
+
+
