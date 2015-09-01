@@ -9,6 +9,11 @@
    text-decoration:none; 
 }
 
+#socialmed {
+position: relative
+
+}
+
 #posttitle {
   font-weight: bold;
   padding-bottom: 3px;

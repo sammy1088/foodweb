@@ -1,0 +1,43 @@
+<div id="wrap"><center>
+  <% title("User Home") %>
+  <h1><%= @user.username %></h1>
+  <% if @user.phone.present? %>
+  phone: <b><%= @user.phone %></b><br>
+  <% end %>
+  
+<%= link_to "Edit account", edit_user_registration_path %>
+  <h2>Produce Selling</h2> <i>click link to edit post</i>
+
+  <div class="row">
+     <div class="col-md-12">
+
+       <% @user.posts.each do |post| %>
+   
+       <div class="col-md-6">
+           <div id="indivs">
+        
+ <%= image_tag post.image.url(:large), :class => "img-rounded" %><br>
+
+            
+      
+             <%= link_to post.title, post_path(post) %><br> 
+           
+
+         </div>
+           
+            </div>
+    
+           <% end %>
+              </div>
+           
+         
+    
+
+      
+  
+ </div>
+
+  
+  
+
+</center>

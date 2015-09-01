@@ -3,7 +3,7 @@ Foodweb::Application.routes.draw do
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
   resources :charges
-resources :users, only: [:index]
+resources :users
   resources :posts
   
   get '/auth/:provider/callback', to: 'sessions#create'
