@@ -1,12 +1,14 @@
 <div id="wrap"><center>
-  <% title("User Home") %>
+  <% title(@user.username) %>
   <h1><%= @user.username %></h1>
   <% if @user.phone.present? %>
-  phone: <b><%= @user.phone %></b><br>
+  phone: <b><%= @user.phone %></b><br><br>
   <% end %>
-  
+  <%= image_tag current_user.image.url(:large), :class => "img-rounded" %>
+  <% if current_user.present? %><br>
 <%= link_to "Edit account", edit_user_registration_path %>
-  <h2>Produce Selling</h2> <i>click link to edit post</i>
+  <% end %>
+  <h2>Produce Selling</h2>  <% if current_user.present? %><i>click link to edit post</i><% end %>
 
   <div class="row">
      <div class="col-md-12">
@@ -15,8 +17,15 @@
    
        <div class="col-md-6">
            <div id="indivs">
-        
- <%= image_tag post.image.url(:large), :class => "img-rounded" %><br>
+              <% if post.image? %>
+ <%= image_tag post.image.url(:large), :class => "img-rounded" %>
+              <br>
+             <% else %>
+             <%= image_tag "noimage.png", :class => "img-rounded", size: "200" %>
+             
+             <br>
+<% end %>
+
 
             
       
