@@ -17,6 +17,11 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
+       config.omniauth :stripe_connect,
+      ENV['STRIPE_CONNECT_CLIENT_ID'],
+      ENV['STRIPE_SECRET_KEY'],
+      :scope => 'read_write',
+      :stripe_landing => 'register'
   config.secret_key = secure_token
 
   # ==> Mailer Configuration
@@ -268,4 +273,5 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
 end
