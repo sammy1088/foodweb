@@ -7,7 +7,8 @@ class PagesController < ApplicationController
    
   end
   def home
-    @posts = Post.all
+    
+    @posts = Post.near([35.2200, 97.4400], 50000, order: 'distance')
   
  @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
   marker.lat post.latitude
