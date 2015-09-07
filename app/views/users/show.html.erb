@@ -4,7 +4,9 @@
   <% if @user.phone.present? %>
   phone: <b><%= @user.phone %></b><br><br>
   <% end %>
-  <%= image_tag current_user.image.url(:large), :class => "img-rounded" %>
+  <% if @user.image? %>
+  <%= image_tag @user.image.url(:large), :class => "img-rounded" %>
+  <% end %>
   <% if current_user.present? %><br>
 <%= link_to "Edit account", edit_user_registration_path %>
   <% end %>

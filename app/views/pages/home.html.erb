@@ -47,6 +47,16 @@
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
+         var oms = new OverlappingMarkerSpiderfier(handler.getMap(), {
+    keepSpiderfied: true
+    // Other options you need
+  });
+
+  // Track each marker with OMS
+  _.each(markers, function(marker) {
+    oms.addMarker(marker.getServiceObject());
+  });
+
       }); </script> 
           <center>
 			
