@@ -43,7 +43,7 @@ end
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  devise :omniauthable, :omniauth_providers => [:twitter, :stripe_connect]
+  devise :omniauthable, :omniauth_providers => []
 
   # Pagination
   paginates_per 100

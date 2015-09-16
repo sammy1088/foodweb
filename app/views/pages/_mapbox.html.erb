@@ -1,5 +1,5 @@
 <div class="map_box">
-<h3><%= link_to post.title, post_path(post) %></h3>
+<h3><%= link_to post.title, user_path(post.user_id) %></h3>
 <p><%= post.address %></p>
   <% if post.image? %>
   <p><%= image_tag post.image.url(:large), :class => "img-rounded" %></p>

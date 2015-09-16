@@ -1,52 +1,97 @@
-<div id="wrap"><center>
   <% title(current_user.username) %>
-<h1><%= current_user.username %></h1>
-  <% if current_user.phone.present? %>
-  phone: <b><%= current_user.phone %></b><br><br>
-  <% end %>
-  <% if current_user.image? %>
-  <%= image_tag current_user.image.url(:large), :class => "img-rounded" %>
-  <% end %>
-  <% if current_user.present? %><br>
-<%= link_to "Edit account", edit_user_registration_path %>
-  <% end %>
-  <h2>Produce Selling</h2> <i>click link to edit post</i>
+<div id="wrap">
+  
+<div class="container">
 
-  <div class="row">
+ <div class="col-md-12">
+       <div class="row">
+         <div class="profr">
+           
+           
+                       <div id="parent">
+                  <div class="float"><% if current_user.image? %>
+                <%= image_tag current_user.image.url(:large), :class => "img-rounded" %>
+                <% end %></div>
+
+
+
+                  <div class="float2">    
+                         <h1><%= current_user.username %></h1>
+                <% if current_user.phone.present? %>
+                phone: <b><%= current_user.phone %></b><br>
+                    <% if current_user.bio? %>
+
+                    <b><%= current_user.bio %></b>
+                    <% end %>
+                      <% if current_user.present? %><br>
+              <%= link_to "Edit account", edit_user_registration_path %>
+                <% end %>
+                <% end %></div>
+
+
+              </div>
+     
+
+
+ 
+                             <div class="row">
+                               <div class="prodsell">
+              <h2><i class="glyphicon glyphicon-grain"style="color:black"></i>Produce Selling</h2> 
+                </div>
+                               </div>
+  </div>
+    
      <div class="col-md-12">
+           <div class="row">
 
   <% current_user.posts.each do |post| %>
    
-       <div class="col-md-6">
-           <div id="indivs">
-        
-      <% if post.image? %>
- <%= image_tag post.image.url(:large), :class => "img-rounded" %>
+            
+             
+             
+        <div class="col-md-3">
+          <div class="prod">
+            <div id="prod2">
+                <% if post.image? %>
+             <%= image_tag post.image.url(:large), :class => "img-rounded" %>
               <br>
              <% else %>
              <%= image_tag "noimage.png", :class => "img-rounded", size: "200" %>
              
              <br>
-<% end %>
-      
+             <% end %>
+               </div>
+    <div id="prod1">
              <b><%= link_to post.title, edit_post_path(post) %></b><br> 
-           
-
-         </div>
-           
-            </div>
+           </div>
+           </div>
     
+   </div>
+ 
            <% end %>
+
+  </div>
+  
+</div>
+
+  </div>
+
+        
+  
+
+
               </div>
            
-         
+         </div>
+     
+
+
+ 
     
 
-      
-  
- </div>
+         
 
-  
-  
 
-</center>
+      </div>
+
+
