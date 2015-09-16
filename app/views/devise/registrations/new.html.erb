@@ -27,9 +27,9 @@
  
     </div>
         <div class="form-group">
-      <%= f.label :bio %>
+      <%= f.label :bio %> <i>not required, but it would be nice if you did include it...</i>
  <div class="row">
-   <%= f.text_field :bio, class: "form-control" %>
+   <%= f.text_field :bio, class: "form-control" %> 
   </div>
     </div>
         <div class="form-group">
@@ -40,7 +40,7 @@
     </div>
     
             <div class="form-group">
-              <%= f.label :phone %> <i>not required</i>
+              <%= f.label :phone %> <i>not required at all, but helpful</i>
  
           <%= f.phone_field :phone, :autofocus => true, class: "form-control" %>
   
@@ -49,14 +49,14 @@
 
     <div class="form-group">
 
-          <%= f.label :password %>
+          <%= f.label :password %> <i>be creative or don't, I don't care</i>
           <%= f.password_field :password, class: "form-control" %>
     
     </div>
 
     <div class="form-group">
  
-          <%= f.label :password_confirmation %>
+          <%= f.label :password_confirmation %> <i>because typing it one time just ain't enough...</i>
           <%= f.password_field :password_confirmation, class: "form-control" %>
    
     </div>
