@@ -10,22 +10,26 @@
            
                        <div id="parent">
                   <div class="float"><% if current_user.image? %>
-                <%= image_tag current_user.image.url(:large), :class => "img-rounded" %>
+                    <%= image_tag current_user.image.url(:large), :class => "img-circle" %>
                 <% end %></div>
 
 
-
-                  <div class="float2">    
-                         <h1><%= current_user.username %></h1>
+           <div class="float2">    
+             <h2><%= current_user.username %></h2>
                 <% if current_user.phone.present? %>
                 phone: <b><%= current_user.phone %></b><br>
+                     <% current_user.posts.find(1) do |post| %>
+                    
+                   location: <b><%= post.address %></b><br>
+                    <% end %>
                     <% if current_user.bio? %>
 
-                    <b><%= current_user.bio %></b>
+                    <b><div class="biop"><%= current_user.bio %></div></b>
                     <% end %>
-                      <% if current_user.present? %><br>
-              <%= link_to "Edit account", edit_user_registration_path %>
-                <% end %>
+                    <%= mail_to current_user.email, "email seller", class: "btn btn-info btn-xs" %><br>
+             
+<%= link_to "Edit account", edit_user_registration_path %>
+
                 <% end %></div>
 
 
@@ -36,7 +40,7 @@
  
                              <div class="row">
                                <div class="prodsell">
-              <h2><i class="glyphicon glyphicon-grain"style="color:black"></i>Produce Selling</h2> 
+              <h1><i class="glyphicon glyphicon-grain"style="color:black"></i>Produce Selling</h1> 
                 </div>
                                </div>
   </div>
