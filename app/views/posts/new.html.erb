@@ -4,17 +4,20 @@
     <h1>List your produce</h1>
     <br>
 <%= form_for :post, url: posts_path do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
-  </p>
  
-  <p>
+    
+
+      <p><%= f.label :title %>
+    <%= f.text_field :title, :maxlength => 40, :size => 40, class: "form-control", placeholder: "Maximum length 40 characters" %>
+        </p>
+  
+   <p>
+
     <%= f.label "Description" %> <i>please include description of freshness, quantity available, and cost per unit.</i>
     
-    <br>
+   
     <%= f.text_area :text, class: "form-control" %>
-  </p>
+</p>
 
 
   <p>
@@ -29,7 +32,7 @@
     <br>
     
 <div class="btn-group">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit "list!", :class => 'btn btn-primary' %>
   </div>
 
 <% end %>
