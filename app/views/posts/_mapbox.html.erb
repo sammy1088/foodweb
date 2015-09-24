@@ -5,6 +5,6 @@
   <p><%= image_tag post.image.url(:large), :class => "img-rounded" %></p>
   <% end %>
     <p><%= mail_to post.user.email, "email seller", class: "btn btn-info" %></p>
-  <p>seller: <% if post.user.image? %><%= image_tag post.user.image.url(:small), :class => "img-circle" %><b> <%= link_to post.user.username, user_path(post.user_id) %></b></p>
+  <p>seller: <% if post.user.image? %><%= image_tag post.user.image.url(:small), :class => "img-circle" %><% end %><b> <%= link_to post.user.username, user_path(post.user_id) %></b></p>
 <br>
 </div>
