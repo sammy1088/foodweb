@@ -23,7 +23,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def update
-    old_username = @user.username
+  
     new_params = user_params.dup
     new_params[:username] = new_params[:username].strip
     new_params[:email] = new_params[:email].strip

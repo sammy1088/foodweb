@@ -1,0 +1,29 @@
+
+    <div id="wrap">
+
+    <div class="container">
+
+      
+      
+<% @posts.each do |post| %>
+
+<div class="row">
+  <%= link_to post.title, post_path(post) %> | <%= post.user.username %>
+     
+  </div>
+   <% end %>
+     
+      <% @users.each do |user| %>
+
+<div class="row">
+<%= user.email %> |
+  <%= user.username %> | <%= user.id %>
+  </div>
+   <% end %>
+      <h1>User Count:  <%= User.count %></h1>
+
+      
+      
+      
+          </div>
+  </div>

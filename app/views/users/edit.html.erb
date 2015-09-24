@@ -6,11 +6,10 @@
   <div class="col-sm-12">
     <h1>Edit your profile</h1>
 
-    <%= form_for(resource, :as => resource_name,
-    :url => registration_path(resource_name),
-    :html => { :method => :put, role: "form" }) do |f| %>
+    
+    <%= form_for @user, :method => :patch do |f| %>
 
-    <%= devise_error_messages! %>
+ 
     <div class="form-group">
   <%= f.label :image %>
       <div class="row">
@@ -40,13 +39,6 @@
       </div>
     </div>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div class="row">
-  
-        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-  
-    </div>
-    <% end %>
 
     <div class="form-group">
       <%= f.label :password %> <i><small>(leave blank if you don't want to change it)</small></i>
@@ -75,11 +67,6 @@
       </div>
     </div>
 
-    <div class="row">
-     
-        <%= f.submit "Update", class: "btn btn-primary" %> - <%= link_to "Cancel", inside_path %>
-     
-    </div>
     
      <% if current_user.id == 1 %>
     <p>

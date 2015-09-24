@@ -15,10 +15,8 @@ end
   get "disclaimer", to: "pages#disclaimer", as: "disclaimer"
 
 
-  namespace :admin do
-    root "base#index"
-    resources :users
+  resources :admin 
     
-  end
+ 
 
 end

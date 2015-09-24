@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit]
+
   def index
  
     if params[:search].present?
