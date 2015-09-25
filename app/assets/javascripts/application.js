@@ -12,10 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require common
 //= require underscore
 //= require gmaps/google
+//= require jquery.raty
+//= require ratyrate
 //= require spiderfier.min
 //= require_tree .

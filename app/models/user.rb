@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_many :posts
+  ratyrate_rater
     has_attached_file :image, 
-  styles: { small: "64x64#", med: "100x100", large: "200x200#" }, :storage => :s3, :bucket => "foodweb"
+  styles: { thumb: "32x32#", small: "64x64#", med: "100x100", large: "200x200#" }, :storage => :s3, :bucket => "foodweb"
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
  def self.find_or_create_from_auth_hash(auth_hash)
     user = where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create

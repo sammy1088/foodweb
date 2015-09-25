@@ -18,8 +18,10 @@
     <b>address:</b> <%= @post.address %><br>
     <div id="posttime">
     posted <b><%= time_ago_in_words(@post.created_at)  %></b> ago
-      </div>
-    
+      </div><br>
+    <b>Reviews</b><br>
+    Quality: <%= rating_for @post, "quality" %>
+      
    </div>
 </center>
 </div>

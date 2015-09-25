@@ -22,6 +22,7 @@ gem 'gmaps4rails'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-stripe-connect'
+gem 'ratyrate'
 
 
 # Necessary for Windows OS (won't install on *nix systems)

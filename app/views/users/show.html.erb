@@ -31,8 +31,9 @@
                   <% if current_user == @user %><br>
 <%= link_to "Edit account", edit_user_registration_path %>
   <% end %>
-                <% end %></div>
-
+                <% end %>
+                         </div>
+                         
 
               </div>
      
@@ -67,7 +68,8 @@
              <% end %>
                </div>
     <div id="prod1">
-             <b><%= link_to post.title, post_path(post) %></b><br> 
+             <b><%= link_to post.title, post_path(post) %></b><br>
+      Quality: <%= rating_for post, "quality" %>
            </div>
            </div>
     
