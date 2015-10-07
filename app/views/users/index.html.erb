@@ -9,7 +9,7 @@
 
 <div class="row">
 <%= user.email %> |
-      <%= user.username %>
+  <%= link_to user.username, user_path(user.id) %>
   </div>
    <% end %>
       <h1>User Count:  <%= User.count %></h1>
