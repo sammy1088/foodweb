@@ -1,76 +1,76 @@
 <div id="wrap">
     
 <div class="container">
-  <center>
+  
 <div class="row">
-  <div class="col-sm-12">
-    <h1>Sign up</h1>
-    <br>
-
-    <%= form_for(resource, :as => resource_name,
+  <div class="col-sm-10">
+    <h1 class="well">Registration Form</h1>
+   <div class="col-lg-12 well">
+	<div class="row">
+				    <%= form_for(resource, :as => resource_name,
     :url => registration_path(resource_name),
     :html => { :role => "form" }) do |f| %>
 
     <%= devise_error_messages! %>
 
-    <div class="form-group">
-      <%= f.label :username %>
-
-          <%= f.text_field :username, :autofocus => true, class: "form-control" %>
-
-    </div>
-
-    <div class="form-group">
-      <%= f.label :email %>
+					<div class="col-sm-12">
+							<div class="row">
+							<div class="col-sm-6 form-group">
+			 <%= f.label :email %>
 
           <%= f.email_field :email, class: "form-control" %>
- 
-    </div>
-        <div class="form-group">
-      <%= f.label :bio %> <i>not required, but it would be nice if you did include it...</i>
- <div class="row">
+							</div>
+		
+						</div>
+            <div class="row">
+							<div class="col-sm-6 form-group">
+					
+							      <%= f.label :username %>
+
+          <%= f.text_field :username, :autofocus => true, class: "form-control" %>
+							</div>
+			<div class="col-sm-6 form-group">
+								<label>Profile Picture</label> <i>*not required</i>
+        <%= f.file_field :image %>
+							
+							</div>
+						</div>
+             <div class="row">
+							<div class="col-sm-6 form-group">
+							<%= f.label :phone %> <i>*not required</i>
+								<%= f.phone_field :phone, :autofocus => true, class: "form-control" %>
+							</div>
+               </div>
+            <div class="row">
+						<div class="col-sm-8 form-group">
+	      <%= f.label :bio %> <i>*not required</i>
+
    <%= f.text_field :bio, class: "form-control" %> 
-  </div>
-    </div>
-        <div class="form-group">
-            <%= f.label :image %><br>
-  <%= f.file_field :image %>
+						</div>
+              </div>
+                   <div class="row">
+							<div class="col-sm-6 form-group">
+								<label>Password</label>
+								 <%= f.password_field :password, class: "form-control" %>
+							</div>
+     
+							<div class="col-sm-6 form-group">
+								<label>Password Confirmation</label>
+								<%= f.password_field :password_confirmation, class: "form-control" %>
+							</div>
+               </div>
+    <%= f.submit "Sign up", class: "btn btn-lg btn-info" %>
+								
+					</div>
+			    <% end %>
 
- 
-    </div>
-    
-            <div class="form-group">
-              <%= f.label :phone %> <i>not required at all, but helpful</i>
- 
-          <%= f.phone_field :phone, :autofocus => true, class: "form-control" %>
-  
-    </div>
-
-
-    <div class="form-group">
-
-          <%= f.label :password %> <i>be creative or don't, I don't care</i>
-          <%= f.password_field :password, class: "form-control" %>
-    
-    </div>
-
-    <div class="form-group">
- 
-          <%= f.label :password_confirmation %> <i>because typing it one time just ain't enough...</i>
-          <%= f.password_field :password_confirmation, class: "form-control" %>
    
-    </div>
+				</div>
+	</div>
 
- 
-     
-        <%= f.submit "Sign up", class: "btn btn-primary" %>
-     
 
-    <% end %>
-
-    <%= render "devise/shared/links" %>
   </div>
 </div>
-    </center>
+  
 </div>
   </div>

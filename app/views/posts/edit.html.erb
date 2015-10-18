@@ -1,34 +1,48 @@
 <div id="wrap">
   <div class="container">
-  <center>
-     <h1>Edit your listing</h1>
-    <br>
+<div class="row">
+  <div class="col-sm-10">
+    <h1 class="well">Create Listing</h1>
+       <div class="col-lg-12 well">
+	<div class="row">
 <%= form_for @post, :method => :patch do |f| %>
- <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
-  </p>
  
-  <p>
-    <%= f.label "Description" %><br>
+    
+	<div class="col-sm-12">
+							<div class="row">
+							<div class="col-sm-6 form-group">
+      <%= f.label :title %>
+    <%= f.text_field :title, :maxlength => 40, :size => 40, class: "form-control", placeholder: "Maximum length 40 characters" %>
+        </div>
+  </div>
+      
+  
+	<div class="row">
+							<div class="col-sm-9 form-group">
+
+    <%= f.label "Description" %> <i>please include description of freshness, quantity available, and cost per unit.</i>
+    
+   
     <%= f.text_area :text, class: "form-control" %>
-  </p>
-
- 
- 
-
-  <p>
+      </div>
+  </div>
+      
+	<div class="row">
+							<div class="col-sm-6 form-group">
     <%= f.label :address %><br>
     <%= f.text_area :address, class: "form-control" %>
-  </p>
-
-    <p>
+    </div>
+  </div>
+      
+   	<div class="row">
+							<div class="col-sm-6 form-group">
   <%= f.label :image %><br>
   <%= f.file_field :image %>
-</p>
-
-    
-    <% if @post.user.id == current_user.id %>
+ </div>
+  </div>
+      
+    <br>
+        <% if @post.user.id == current_user.id %>
   
     <p>
     <div class="btn-group">
@@ -55,12 +69,13 @@ data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
               method: :delete,
 data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
     <% end %>
-    
-    
-<% end %>
-    
-    
 
-      </center>
+
+<% end %>
+    <br>
+  
 </div>
   </div>
+    </div>
+  </div>
+
