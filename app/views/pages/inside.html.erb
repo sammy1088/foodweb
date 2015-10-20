@@ -19,8 +19,10 @@
                          </div>
 
 
-           <div class="float2">    
-             <h2><%= current_user.username %></h2><br>
+           <div class="float2">   
+             
+             <h2><%= current_user.username %></h2>
+             <h4><%= current_user.categ %></h4>
                 <% if current_user.phone.present? %>
                 phone: <b><%= current_user.phone %></b>
              <% else %>

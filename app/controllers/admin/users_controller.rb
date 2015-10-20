@@ -21,7 +21,9 @@ class Admin::UsersController < Admin::BaseController
   
   def create
   end
-
+  def options_for_categs
+    ['Spring', 'Summer', 'Autumn', 'Winter']
+  end
   def update
   
     new_params = user_params.dup
@@ -70,7 +72,8 @@ class Admin::UsersController < Admin::BaseController
     :admin,
     :locked,
     :phone,
-      :image
+      :image,
+      :categ
     )
   end
 

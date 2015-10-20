@@ -14,6 +14,17 @@
     <%= devise_error_messages! %>
 
 					<div class="col-sm-12">
+                    	<div class="row">
+							<div class="col-sm-6 form-group">
+                <label>I'm a</label>
+                
+                <%= f.select :categ, [ ['Please select', nil], 'Buyer', 'Seller', 'Restaurant', 'Grocery Store' ], {}, class: "form-control" %>
+      
+						</div>
+		
+						</div>
+            
+            
 							<div class="row">
 							<div class="col-sm-6 form-group">
 			 <%= f.label :email %>

@@ -5,6 +5,7 @@
 <div class="row">
   <div class="col-sm-10">
     <h1 class="well">Registration Form</h1>
+  
    <div class="col-lg-12 well">
 	<div class="row">
 				    <%= form_for(resource, :as => resource_name,
@@ -12,8 +13,18 @@
     :html => { :role => "form" }) do |f| %>
 
     <%= devise_error_messages! %>
-
-					<div class="col-sm-12">
+    	<div class="col-sm-12">
+              	<div class="row">
+							<div class="col-sm-6 form-group">
+                <label>I'm a</label>
+                
+                <%= f.select :categ, [ ['Please select', nil], 'Buyer', 'Seller', 'Restaurant', 'Grocery Store' ], {}, class: "form-control" %>
+ 
+                
+						</div>
+		
+						</div>
+            
 							<div class="row">
 							<div class="col-sm-6 form-group">
 			 <%= f.label :email %>
