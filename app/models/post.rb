@@ -9,5 +9,5 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates :title, presence: true
   validates :text, presence: true
-
+  has_many :users
 end
