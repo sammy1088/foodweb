@@ -88,6 +88,7 @@ Foodweb::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Mailer
+  Rails.application.routes.default_url_options[:host] = 'foodweb.io'
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => ENV["DOMAIN"] }
   config.action_mailer.delivery_method = :smtp
