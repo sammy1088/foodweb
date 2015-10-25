@@ -90,7 +90,7 @@ Foodweb::Application.configure do
   # Mailer
   Rails.application.routes.default_url_options[:host] = 'foodweb.io'
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => ENV["DOMAIN"] }
+  config.action_mailer.default_url_options = { :host => 'foodweb.io' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
 address: "smtp.gmail.com",
