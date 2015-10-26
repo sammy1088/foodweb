@@ -99,7 +99,7 @@ Foodweb::Application.configure do
   :authentication => :plain,
   :user_name      => ENV['SENDGRID_USERNAME'],
   :password       => ENV['SENDGRID_PASSWORD'],
-  :domain         => 'heroku.com',
+    :domain         => 'foodweb.io',
   :enable_starttls_auto => true
   }
 end
