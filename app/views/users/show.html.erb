@@ -9,6 +9,9 @@
            
            
                        <div id="parent">
+                         
+          
+                          
                   <div class="float"><% if @user.image? %>
                     <%= image_tag @user.image.url(:large), :class => "img-circle" %>
                 <% end %></div>
@@ -17,11 +20,14 @@
 
                   <div class="float2">    
                     <h2><%= @user.username %></h2>
+              
                     <% if @user.categ? %>
                      <h4><%= @user.categ %></h4>
                     <% end %>
                 <% if @user.phone.present? %>
                 phone: <b><%= @user.phone %></b><br>
+                    <% end %>
+                    <% if current_user.posts.present? %>
                      <% @user.posts.find(1) do |post| %>
                     
                    location: <b><%= post.address %></b><br>
@@ -31,6 +37,8 @@
                     <b><div class="biop"><%= @user.bio %></div></b>
                     <% end %>
                     <%= mail_to @user.email, "email seller", class: "btn btn-info btn-xs" %>
+                 
+
                   <% if current_user == @user %><br>
 <%= link_to "Edit account", edit_user_registration_path %>
   <% end %>

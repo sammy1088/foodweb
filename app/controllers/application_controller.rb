@@ -18,7 +18,8 @@ before_action :set_variant
         :phone,
       :image,
       :bio,
-      :categ)
+      :categ,
+      :address)
     }
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(
       :username,
@@ -29,7 +30,8 @@ before_action :set_variant
       :current_password,
       :image,
       :bio,
-      :categ
+      :categ,
+      :address
       )
     }
   end

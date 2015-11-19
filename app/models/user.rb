@@ -46,6 +46,7 @@ end
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   devise :omniauthable, :omniauth_providers => []
+  devise :omniauth_providers => [:stripe_connect]
 
   # Pagination
   paginates_per 100

@@ -10,7 +10,7 @@
            
                        <div id="parent">
                   <div class="float"><% if current_user.image? %>
-                    <%= image_tag current_user.image.url(:large), :class => "img-circle" %>
+                    <%= image_tag current_user.image.url(:large), :class => "img-rounded" %>
                  <% else %>
                    <%= image_tag "noimage.png", :class => "img-rounded", size: "200" %>
                     <br>
@@ -40,17 +40,12 @@
              <br>
              
                     <% end %>
-                <% if current_user.posts.present? %>
-                     <% current_user.posts.find(1) do |post| %>
-                    
-                   location: <b><%= post.address %></b><br>
-                    
-             <% end %>
-               
-             
-
-
-             <% end %><b><%= link_to "Edit account", edit_user_registration_path %></b></div>
+              
+             location: <b><%= current_user.address %></b><br>
+      <b><%= link_to "Edit account", edit_user_registration_path %><br>
+             </b>
+           
+                         </div>
 
 
               </div>

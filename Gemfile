@@ -13,6 +13,7 @@ gem 'bcrypt', '3.1.10'
 gem 'underscore-rails'
 gem 'geocoder'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'omniauth-stripe-connect'
 gem 'aws-sdk-v1'
 gem 'web-console', '2.1.2'
 gem "paperclip", "~> 4.3"

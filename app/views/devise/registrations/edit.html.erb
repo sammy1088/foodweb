@@ -52,6 +52,13 @@
 								<%= f.phone_field :phone, :autofocus => true, class: "form-control" %>
 							</div>
                </div>
+                        <div class="row">
+						<div class="col-sm-8 form-group">
+              <%= f.label :address %> <i>*not required</i>
+
+              <%= f.text_field :address, class: "form-control" %> 
+						</div>
+              </div>
             <div class="row">
 						<div class="col-sm-8 form-group">
 	      <%= f.label :bio %> <i>*not required</i>

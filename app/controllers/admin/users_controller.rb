@@ -73,7 +73,8 @@ class Admin::UsersController < Admin::BaseController
     :locked,
     :phone,
       :image,
-      :categ
+      :categ,
+      :address
     )
   end
 

@@ -52,6 +52,13 @@
 								<%= f.phone_field :phone, :autofocus => true, class: "form-control" %>
 							</div>
                </div>
+        
+             <div class="row">
+							<div class="col-sm-6 form-group">
+                <%= f.label :address %> <i>*not required</i>
+                <%= f.phone_field :address, :autofocus => true, class: "form-control" %>
+							</div>
+               </div>
             <div class="row">
 						<div class="col-sm-8 form-group">
 	      <%= f.label :bio %> <i>*not required</i>
@@ -70,6 +77,9 @@
 								<%= f.password_field :password_confirmation, class: "form-control" %>
 							</div>
                </div>
+  
+        
+        
     <%= f.submit "Sign up", class: "btn btn-lg btn-info" %>
 								
 					</div>
