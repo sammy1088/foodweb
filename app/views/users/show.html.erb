@@ -27,7 +27,7 @@
                 <% if @user.phone.present? %>
                 phone: <b><%= @user.phone %></b><br>
                     <% end %>
-                    <% if current_user.posts.present? %>
+                    <% if @user.posts.present? %>
                      <% @user.posts.find(1) do |post| %>
                     
                    location: <b><%= post.address %></b><br>
